@@ -36,9 +36,22 @@ h1, h2, h3, h4, h5, h6 {
 img:hover {
 	animation: animate-hover;
 }
+nav select {
+	display: none;
+}
+nav {
+	overflow: auto;
+	white-space: nowrap;
+}
+nav a {
+	display: inline-block;
+	text-align: center;
+}
+
 
 
 </style>
+
 
 <script>
 	window.addEventListener('scroll', () => {
@@ -52,6 +65,7 @@ img:hover {
 
 <!-- Navbar sits on top -->
 <div class="a-top">
+	<nav>
 	<div class="a-bar a-white a-padding a-card" style="letter-spacing:4px;background-color: white; max-width: 100vw;">
 		<a href="#home" class="a-bar-item a-button" style="color:rgb(0,0,0);">Chef Abraham Muhlbaum</a>
 		<!-- Right side navbar, hidden on small screens -->
@@ -70,6 +84,14 @@ img:hover {
 			<a href="http://ChefAbraham.github.io/browseRecipes" class="a-bar-item a-button" style="letter-spacing:4px;">Browse Recipes</a>
 		</div>
 	</div>
+	<select>
+		<option value="" selected="selected">Go to...></to></option>
+		<option value="/#home">Home</option>
+		<option value="/#about">About</option>
+		<option value="/#menu">Sample Menus</option>
+		<option value="/#contact">Contact</option>
+		<option value="/browseRecipes">Browse Recipes</option>
+	</select>
 </div>
 	<div class="fadein">
 		<img src="header.jpeg" alt="Fried Pork Chop w/Gravy">
@@ -81,7 +103,7 @@ img:hover {
 		<div class="a-display-bottomleft a-padding-large a-opacity">
 		<h1 class="a-xxlarge" style="color: rgb(0,0,0); background-color: rgba(255, 255, 255, 0.25); font-weight: 25px">Chef Abraham Muhlbaum</h1>
 	</div>
-	
+</nav>
 </div>
 <script>
 var i;
