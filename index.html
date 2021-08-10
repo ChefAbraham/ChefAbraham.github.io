@@ -39,10 +39,25 @@ img:hover {
 }
 .topnav {
 	overflow: hidden;
+	position: fixed;
 }
 .topnav .icon {
 	display: none;
 }
+.dropdown {
+	float: left;
+	overflow: hidden;
+}
+.dropdown .dropdown-button {
+	border: none;
+	outline: none;
+	background-color: inherit;
+	font-family: inherit;
+}
+.dropdown:hover .abe-dropdown-content {
+	display: block;
+}
+
 @media screen and (max-width: 600px) {
 	.topnav a:not(:first-child), .abe-dropdown, .dropdown-button {
 		display: none;
@@ -97,14 +112,14 @@ img:hover {
 <body>
 
 <!-- Navbar sits on top -->
-<div class="topnav" id="myTopnav">
-	<div class="a-bar a-white a-padding a-card" style="letter-spacing:4px;background-color: white; max-width: 100vw;">
-		<a href="#home" class="a-bar-item a-button" style="color:rgb(0,0,0);">Chef Abraham Muhlbaum</a>
+<div class="topnav a-top" id="myTopnav">
+	<div style="letter-spacing:4px;background-color: white; max-width: 100vw;">
+		<a href="#home" style="color:rgb(0,0,0);">Chef Abraham Muhlbaum</a>
 		<!-- Right side navbar, hidden on small screens -->
 		<div class="a-right a-hide-small">
-			<a href="#about" class="a-bar-item a-button">About</a>
+			<a href="#about">About</a>
 			<div class="abe-dropdown">
-				<button class="a-bar-item a-button dropdown-button">Sample Menus</button>
+				<button class=" dropdown-button">Sample Menus</button>
 				<div class="abe-dropdown-content">
 					<a href="#menu">Coursed Dinner</a>
 					<a href="#menu1">Tapas Garden Party</a>
@@ -112,9 +127,9 @@ img:hover {
 					<a href="#menu3">Beer Pairing Dinner</a>
 				</div>
 			</div>
-			<a href="#contact" class="a-bar-item a-button">Contact</a>
+			<a href="#contact">Contact</a>
 			<a href="http://ChefAbraham.github.io/browseRecipes" class="a-bar-item a-button" style="letter-spacing:4px;">Browse Recipes</a>
-			<a href="javascript:void(0);" class="icon a-bar-item a-button" style="font-size: 15px;" onclick="myFunction()">&#9776;</a>
+			<a href="javascript:void(0);" class="icon" style="font-size: 15px;" onclick="myFunction()">&#9776;</a>
 		</div>
 	</div>
 </div>
