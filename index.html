@@ -35,10 +35,21 @@ h1, h2, h3, h4, h5, h6 {
 	opacity: 0;
 }
 img:hover {
-	animation: hov 2s ease-in-out;;
+	animation: hov 2s ease-in-out;
 
 }
-
+.icon {
+	display: none;
+}
+@media screen and (max-width: 600px) {
+	a:not(:first-child){
+		display: none;
+	}
+	a.icon {
+		float: right;
+		display: block;
+	}
+}
 
 
 </style>
@@ -68,6 +79,7 @@ img:hover {
 		<a href="http://ChefAbraham.github.io#home" class="a-bar-item a-button" style="color:rgb(0,0,0);">Chef Abraham Muhlbaum</a>
 		<!-- Right side navbar, hidden on small screens -->
 		<div class="a-right a-hide-small">
+			<a href="javascript:void(0);" class="icon a-bar-item a-button" onclick="myFunction()">&#x2630;</a>
 			<a href="http://ChefAbraham.github.io#about" class="a-bar-item a-button">About</a>
 			<div class="abe-dropdown">
 				<button class="a-bar-item a-button">Sample Menus</button>
@@ -79,8 +91,8 @@ img:hover {
 				</div>
 			</div>
 			<a href="http://ChefAbraham.github.io#contact" class="a-bar-item a-button">Contact</a>
-			<a href="http://ChefAbraham.github.io/browseRecipes" class="a-bar-item a-button">Browse Recipes</a>+
-			<a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+			<a href="http://ChefAbraham.github.io/browseRecipes" class="a-bar-item a-button">Browse Recipes</a>
+			
 		</div>
 	</div>
 </div>
@@ -107,7 +119,7 @@ for (i=0; i < els.length; i++) {
 	els[i].classList.add('is-hidden');
 }
 root.addEventListener('transitionend', function() {
-	root.insertBefore(root.querySelector(':first-child.is-hidden'), null);
+	root.insertBefore(root.querySelector('.is-hidden'), null);
 });
 setInterval(function(){
 	root.querySelector(':first-child').classList.add('is-hidden');
