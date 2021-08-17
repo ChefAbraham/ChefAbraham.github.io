@@ -38,9 +38,7 @@ img:hover {
 	animation: hov 2s ease-in-out;
 
 }
-.topnav {
-	overflow: hidden;
-}
+
 
 .icon {
 	display: none;
@@ -79,6 +77,23 @@ img:hover {
 	.a-col {max-width: 100%;}
 	.a-large {font-size: medium;}
 	img {width: 100%;}
+	.fadein {
+	position: relative;
+	width: 100vw;
+
+}
+.fadein img {
+	position:absolute;
+	left: 0;
+	top: 0;
+	max-width: 100%;
+	min-width: 600px;
+	width: 100vw;
+	height: 100vh;
+	transition: opacity 1s;
+	opacity: 1;
+	-webkit-transform:rotate(90deg);
+}
 }
 
 </style>
@@ -161,7 +176,7 @@ setInterval(function(){
 
 <hr>
 
-<div class="a-content" style="max-width: 1100px; min-width: 50%;">
+<div class="a-content" style="max-width: 1100px; min-width: 25%;">
 
 	<div class="a-row a-padding-64" id="about">
 		<div class="a-col m5 a-padding-large a-hide-small">
@@ -192,7 +207,7 @@ setInterval(function(){
 	</div>
 
 	<div class="a-col m5 a-padding">
-		<img src="ahi.jpeg" class="a-round a-image a-opacity-min" alt="Menu" style="width:100%">
+		<img src="ahi.jpeg" class="a-round a-image a-opacity-min" alt="Menu" style="width:100%" loading="lazy">
 	</div>
 </div>
 
@@ -200,7 +215,7 @@ setInterval(function(){
 
 <div class="a-row a-padding-64" id="menu1">
 	<div class="a-col m5 a-padding-large">
-		<img src="beefTend.jpeg" class="a-round a-image a-opacity-min" alt="bourekas" style="width:100%">
+		<img src="beefTend.jpeg" class="a-round a-image a-opacity-min" alt="bourekas" style="width:100%" loading="lazy">
 	</div>
 	<div class="a-col m5 a-padding-small" style="margin:8px;">
 		<h1 class="a-center">Garden Party</h1><br>
@@ -239,7 +254,7 @@ setInterval(function(){
 	</div>
 
 	<div class="a-col m5 a-padding">
-		<img src="shrimpGrits.jpeg" class="a-round a-image a-opacity-min" alt="Vino" style="width:100%">
+		<img src="shrimpGrits.jpeg" class="a-round a-image a-opacity-min" alt="Vino" style="width:100%" loading="lazy">
 	</div>
 </div>
 
