@@ -75,7 +75,11 @@ img:hover {
 	}
 
 }
-
+@media screen and (max-width: 700px) {
+	.a-col {max-width: 100%;}
+	.a-large {font-size: medium;}
+	img {width: 100%;}
+}
 
 </style>
 
@@ -161,7 +165,7 @@ setInterval(function(){
 
 	<div class="a-row a-padding-64" id="about">
 		<div class="a-col m5 a-padding-large a-hide-small">
-			<img src="frenchBread.jpeg" class="a-round a-image a-opacity-min" style="float:right" alt="Spicy Meat Pies" width="100%" height="750">
+			<img src="frenchBread.jpeg" class="a-round a-image a-opacity-min" style="float:right" alt="Spicy Meat Pies" width="100%" height="750" loading="lazy">
 		</div>
 
 	<div class="a-col m5 a-padding-large" style="margin:8px;">
