@@ -2,7 +2,7 @@ html {
 	box-sizing:border-box;
 }
 @media screen and (max-width: 600px) {
-	a:not(:first-child){
+	.hide{
 		display: none;
 	}
 	a.icon {
@@ -41,8 +41,11 @@ html {
 	h1, h2, h3, h4, h5, h6, p {
 		font-size: large;
 	}
-	.abe-dropdown, .hide {
+	.hide {
 		display: none!important;
+	}
+	.hiddenA {
+		display: block!important;
 	}
 	.topnav a {
 		letter-spacing: 0px;
@@ -51,6 +54,7 @@ html {
 	
 
 }
+
 html {
 	-ms-text-size-adjust:100%;
 	-webkit-text-size-adjust:100%;
@@ -367,7 +371,7 @@ a {
 }
 .a-dropdown-click, .a-dropdown-hover {
 	position: relative;
-	display: inline-block;
+	display: block;
 	cursor: pointer;
 }
 .a-dropdown-hover:hover .a-dropdown-content {
@@ -479,8 +483,8 @@ a {
 	text-align: center
 }
 .abe-dropdown {
-	float: left;
-	overflow: hidden;
+	float: right;
+	overflow: wrap;
 }
 .abe-dropdown .abe-dropbtn {
 	border: none;
@@ -488,14 +492,17 @@ a {
 	padding: 14px 16px;
 	font-family: inherit;
 	margin: 0;
+	float: right;
 }
 
 .abe-dropdown-content {
 	display: none;
+	float: left;
 	position: absolute;
 	min-width: 160px;
 	box-shadow: 0px 8px 16px 0px;
 	z-index: 1;
+	right: 0px;
 }
 .abe-dropdown-content a {
 	float: none;
