@@ -28,9 +28,8 @@ h1, h2, h3, h4, h5, h6 {
 	left: 0;
 	top: 0;
 	max-width: 100%;
-	min-width: 600px;
 	width: 100vw;
-	height: 100vh;
+	aspect-ratio: 16 / 9;
 	transition: opacity 1s;
 	opacity: 1;
 }
@@ -40,6 +39,15 @@ h1, h2, h3, h4, h5, h6 {
 img:hover {
 	animation: hov 2s ease-in-out;
 
+}
+@media screen and (max-width: 600px) {
+	.fadein img {
+		transform: rotate(90deg);
+		aspect-ratio: 3 / 2;
+	}
+	.fadein {
+		height: 100vw;
+	}
 }
 
 
@@ -140,7 +148,7 @@ setInterval(function(){
 		<h1 class="a-center">About Abraham</h1>
 		<h5 class="a-center">Cuilinary Creation Circa 2019</h5>
 		<p class="a-large">Chef Abraham's extensive knowledge of regional cuisines, terroir, and cuilinary history combine with a penchant for enthusiastic hospitality and guest satisfaction to cultivate the perfect event for your guests. From coursed, chef guided fine-dining dinners to casual snacks for a backyard get-together, Chef Abraham can consult, plan and execute the perfect dining experience. Full wine, cocktail, and beer accompaniments available for any event, complete with Chef Abraham's pairing explanations. Private cooking lessons, in-person and digitally, are available.</p>
-		<p class="a-large">Chef Muhlbaum's cuilinary journey began as soon as he could see over the counter in his parent's Louisville, KY kitchen. Fortunaately born into a food family, Chef Abraham experienced authentic cuisines from around the world without leaving his home. His father, Steve, lent his Israeli lineage and extensive cuilinary experience to initiate Abraham into the worlds of Mediterranean cuisine and professional foodservice. His mother, Jan, patiently guided Abraham through her family's traditional southern recipes and introduced him to the science of baking. Chef Abraham has extensive high-end and fine dining restaurant experience, both in the kitchen and behind the bar. His recipe repertoire ranges from around the world, with emphasis on Mediterranean, Mexican, Japanese, and Traditional Southern flavors prepared with the finest techniques from around the world.</p>
+		<p class="a-large">Chef Muhlbaum's cuilinary journey began as soon as he could see over the counter in his parent's Louisville, KY kitchen. Fortunately born into a food family, Chef Abraham experienced authentic cuisines from around the world without leaving his home. His father, Steve, lent his Israeli lineage and extensive cuilinary experience to initiate Abraham into the worlds of Mediterranean cuisine and professional foodservice. His mother, Jan, patiently guided Abraham through her family's traditional southern recipes and introduced him to the science of baking. Chef Abraham has extensive high-end and fine dining restaurant experience, both in the kitchen and behind the bar. His recipe repertoire ranges from around the world, with emphasis on Mediterranean, Mexican, Japanese, and Traditional Southern flavors prepared with the finest techniques from around the world.</p>
 	</div>
 </div>
 
