@@ -41,13 +41,14 @@ html {
 	h1, h2, h3, h4, h5, h6, p {
 		font-size: large;
 	}
-	.abe-dropdown {
+	.abe-dropdown, .hide {
 		display: none!important;
 	}
 	.topnav a {
 		letter-spacing: 0px;
 		font-size: x-small;
 	}
+	
 
 }
 html {
