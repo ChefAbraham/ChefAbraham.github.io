@@ -36,17 +36,15 @@ h1, h2, h3, h4, h5, h6 {
 .fadein img.is-hidden {
 	opacity: 0;
 }
-img:hover {
-	animation: hov 2s ease-in-out;
 
-}
+
 @media screen and (max-width: 600px) {
 	.fadein img {
 		transform: rotate(90deg);
 		aspect-ratio: 3 / 2;
 	}
 	.fadein {
-		height: 100vw;
+		height: 150vw;
 	}
 }
 </style>
@@ -74,29 +72,14 @@ img:hover {
 </div>
 </header>
 <body>
-	<script>
-		var i;
-		var root = document.querySelector('.fadein');
-		var els = root.querySelectorAll(':not(:first-child)');
-		for (i=0; i < els.length; i++) {
-			els[i].classList.add('is-hidden');
-		}
-		root.addEventListener('transitionend', function() {
-			root.insertBefore(root.querySelector('.is-hidden'), null);
-		});
-		setInterval(function(){
-			root.querySelector(':first-child').classList.add('is-hidden');
-			root.querySelector(':nth-child(2)').classList.remove('is-hidden');
-		}, 3000)
-		</script>
 	<div class="fadein">
 		<img src="header6.jpeg" alt="Steak Au Poivre, Loaded Baked Potato, Roasted Tahini Cabbage">
 		<img src="header7.jpeg" alt="Panko Breaded Zucchini Fritters">
-		<img src="header2.jpeg" alt="Hand-Breaded Pork Chop Parmesan">
+		<img src="header8.jpeg" alt="Hand-Breaded Pork Chop Parmesan">
 		<img src="header3.jpeg" alt="California Shrimp Pasta w/ Artichokes & Asparagus and Garlic Pimento Cheese Bread">
 		<img src="header4.jpeg" alt="Mesquite Smoked Pulled Pork, Beef Ribs, Grilled Watermelon & Feta Salad, Potato Salad, Poblano Chive Cornbread">
-		<img src="header5.jpeg" alt="Sourdough Rosemary Foccacia w/Flake Salt">
 		<div class="a-display-bottomleft a-padding-large a-opacity">
 		<h1 class="a-xxlarge" style="color: rgb(0,0,0); background-color: rgba(255, 255, 255, 0.25); font-weight: 25px">Chef Abraham Muhlbaum</h1>
+		<script src='slide.js'></script>
 	</div>
 </body>
